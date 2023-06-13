@@ -1,0 +1,7 @@
+@import "../../../src/styles/mixins";
+
+.notFound {
+  color: red;
+  font-weight: 500;
+  @include fluid(font-size, 16px, 18px);
+}

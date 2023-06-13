@@ -1,0 +1,35 @@
+@import "src/styles/mixins";
+
+.banner {
+  @include fluid(margin-bottom, 25px, 50px);
+}
+
+.block {
+  @include fluid(height, 400px, 500px);
+}
+
+.bannerClient {
+  @include container;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include fluid(margin-bottom, 15px, 30px);
+}
+
+.link {
+  @include fluid(font-size, 18px, 24px);
+  font-weight: 500;
+  color: $textColor;
+  transition: $trn;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.lottie {
+  height: 100%;
+}

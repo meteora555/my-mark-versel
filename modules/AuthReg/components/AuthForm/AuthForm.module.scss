@@ -1,0 +1,43 @@
+@import "src/styles/mixins";
+
+.authForm {
+}
+.form {
+  @include fluid(padding-left, 20px, 30px);
+  @include fluid(padding-right, 20px, 30px);
+  @include fluid(padding-bottom, 20px, 30px);
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  @include fluid(font-size, 16px, 18px);
+  margin-bottom: 40px;
+  color: $textColor;
+  font-weight: 700;
+}
+.button {
+  width: 150px;
+  align-self: center;
+}
+.buttonReg {
+  color: $primary;
+  background: none !important;
+}
+.buttonReset {
+  color: $primary;
+  @include fluid(font-size, 14px, 16px);
+  color: $primary;
+  font-weight: 600;
+  align-self: center;
+  padding: 0;
+  height: 30px;
+}
+.info {
+  @include fluid(font-size, 12px, 14px);
+  color: $textColor;
+  font-weight: 300;
+  align-self: center;
+}
+.item {
+  margin-bottom: 35px;
+}

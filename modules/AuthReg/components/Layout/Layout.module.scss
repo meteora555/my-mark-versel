@@ -1,0 +1,46 @@
+@import "src/styles/mixins";
+
+.layout {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.light {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(1, 186, 252, 1) 35%, rgba(6, 92, 141, 1) 100%);
+  filter: blur(30px);
+  @include fluid(height, 400px, 500px);
+  opacity: 0.6;
+  background-size: 100% 100%;
+}
+
+.active {
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    @include fluid(height, 400px, 500px);
+    opacity: 0.6;
+    background-size: 100% 100%;
+  }
+  50% {
+    @include fluid(height, 500px, 600px);
+    opacity: 1;
+    background-size: 150% 100%;
+  }
+  100% {
+    @include fluid(height, 400px, 500px);
+    background-size: 100% 100%;
+    opacity: 0.6;
+  }
+}

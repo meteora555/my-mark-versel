@@ -1,0 +1,31 @@
+@import "src/styles/mixins";
+.favorites {
+  @include container;
+  @include fluid(margin-top, 10px, 20px);
+}
+.wrapper {
+  @include fluid(margin-bottom, 40px, 80px);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media screen and (max-width: 854px) {
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.title {
+  @include fluid(font-size, 22px, 26px);
+  @include fluid(margin-bottom, 20px, 30px);
+  font-weight: 500;
+  color: $textColor;
+}
+.text {
+  @include fluid(font-size, 14px, 16px);
+  font-weight: 400;
+  color: $textColor;
+}

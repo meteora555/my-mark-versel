@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "lib";
+@import "mixins";
+
+@layer base {
+  button,
+  .button,
+  button[type="button"],
+  button[type="reset"],
+  button[type="submit"] {
+    background-color: #ff2149;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--montserrat-font);
+  &:focus-visible {
+    outline: 1px solid $primary;
+  }
+}
+
+html {
+  transition: $trn;
+  background: $background;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--primary50);
+    transform-style: $trn;
+
+    &:active {
+      background: $primary;
+    }
+  }
+}
+
+body {
+  height: 100%;
+  font-weight: 400;
+  font-style: normal;
+  @include fluid(font-size, 12px, 14px);
+  line-height: 1.7;
+  width: 100% !important;
+}
+
+.light {
+  --text-color: #111;
+  --background: #f7f7f7;
+  --block: rgba(255, 255, 255);
+  --shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+  --gradient: linear-gradient(180deg, #e4e3e3 0%, #eeeeee 100%);
+  --primary: #ff2149;
+  --primary20: rgba(255, 33, 73, 0.2);
+  --primary50: rgba(255, 33, 73, 0.5);
+  --client: rgba(255, 97, 93, 0.2);
+  --price: rgba(253, 135, 105, 0.2);
+  --support: rgba(53, 109, 148, 0.2);
+  --team: rgba(62, 175, 132, 0.2);
+  --delivery: rgba(217, 230, 255, 0.5);
+}
+
+.dark {
+  --text-color: #ffffff;
+  --background: #333;
+  --block: rgb(35, 35, 35);
+  --shadow: 0 10px 20px rgba(255, 255, 255, 0.07);
+  --gradient: linear-gradient(180deg, #4d4c4c 0%, #332c2c 100%);
+  --primary: #ad1a36;
+  --primary20: rgba(255, 33, 73, 0.2);
+  --primary50: rgba(255, 33, 73, 0.5);
+  --client: rgba(255, 97, 93, 0.2);
+  --price: rgba(253, 135, 105, 0.2);
+  --support: rgba(53, 109, 148, 0.2);
+  --team: rgba(53, 148, 112, 0.2);
+  --delivery: rgba(217, 230, 255, 0.2);
+}
+
+.container {
+  @include container;
+}
+
+@layer components {
+  .sk-wrapper {
+    @apply bg-white dark:bg-cyan-900;
+  }
+
+  .sk-item {
+    @apply bg-slate-200 dark:bg-slate-500;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  @include fluid(padding-top, 100px, 100px);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}

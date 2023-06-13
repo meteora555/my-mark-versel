@@ -1,0 +1,122 @@
+@import "src/styles/mixins";
+.wrapper {
+  @include container;
+}
+.bannerMain {
+  margin: 25px auto;
+  @include fluid(padding, 30px, 50px);
+  background: -webkit-linear-gradient(left, #e78e96, #c64a57);
+  display: flex;
+  justify-content: space-between;
+}
+.bannerAbout {
+  @include fluid(height, 600px, 800px);
+  @include fluid(margin-bottom, 25px, 50px);
+  position: relative;
+}
+.imgWrapper {
+  @include fluid(width, 130px, 160px);
+  @include fluid(height, 210px, 245px);
+  @include fluid(margin-right, 40px, 80px);
+  position: relative;
+}
+.info {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    @include fluid(font-size, 26px, 32px);
+    @include fluid(margin-bottom, 15px, 25px);
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+  }
+  &__text {
+    @include fluid(font-size, 18px, 24px);
+    font-weight: 500;
+    color: #fff;
+  }
+}
+.bannerConvince {
+  @include fluid(margin-bottom, 30px, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__block {
+    @include fluid(padding, 10px, 20px);
+    @include fluid(height, 250px, 280px);
+    width: 32%;
+    background: #fff;
+    transition: 0.38s ease-in-out;
+    position: relative;
+    &:hover {
+      background: $primary;
+      .bannerConvince__title {
+        color: #fff;
+      }
+    }
+  }
+  &__title {
+    @include fluid(font-size, 18px, 24px);
+    font-weight: 700;
+    width: 50%;
+    position: relative;
+    z-index: 1;
+    color: $textColor;
+    transition: 0.38s ease-in-out;
+  }
+  &__imgWrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 65%;
+    height: 190px;
+  }
+}
+.img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  @include fluid(font-size, 36px, 60px);
+  @include fluid(margin-bottom, 50px, 100px);
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+}
+
+.container {
+  @include container;
+  @include fluid(padding-top, 50px, 100px);
+  position: relative;
+  z-index: 1;
+}
+
+.block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  width: 23%;
+  text-align: center;
+}
+
+.text {
+  @include fluid(margin-top, 20px, 40px);
+  @include fluid(font-size, 14px, 18px);
+  font-weight: 500;
+  color: #fff;
+}
+
+.svg {
+  margin: auto;
+  @include fluid(height, 100px, 175px);
+  @include fluid(width, 100px, 175px);
+}

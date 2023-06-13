@@ -1,0 +1,54 @@
+@import "src/styles/mixins";
+
+.accountAside {
+  width: 25%;
+  @media screen and (max-width: $breakpoint-lg) {
+    width: 100%;
+    margin-top: 0px;
+  }
+}
+.list {
+  @media screen and (max-width: $breakpoint-lg) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+}
+.item {
+  @include fluid(margin-bottom, 30px, 40px);
+  width: fit-content;
+  transition: $trn;
+  border-bottom: 1px solid $background;
+  @media screen and (max-width: $breakpoint-lg) {
+    // width: 120px;
+  }
+  &:hover {
+    border-bottom: 1px solid $primary;
+  }
+  &_active {
+    opacity: 0.7;
+    @include fluid(margin-bottom, 30px, 40px);
+    width: fit-content;
+    transition: $trn;
+    border-bottom: 1px solid $primary;
+  }
+}
+
+.link {
+  @include fluid(font-size, 14px, 16px);
+  font-weight: 400;
+  line-height: 120%;
+  color: $textColor;
+  @media screen and (max-width: $breakpoint-lg) {
+    font-size: 16px;
+  }
+}
+.logout {
+  padding: 0;
+  background: transparent !important;
+  &:hover {
+    color: $primary !important;
+  }
+}

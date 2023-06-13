@@ -1,0 +1,40 @@
+@import "../../../src/styles/mixins";
+
+.container {
+  @include container;
+  @include fluid(margin-bottom, 25px, 50px);
+}
+
+.map {
+  @include fluid(height, 400px, 600px);
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.block {
+  background: $block;
+  color: $textColor;
+}
+
+.item {
+  margin-top: 5px;
+}
+
+.subtitle {
+  @include fluid(margin-right, 5px, 10px);
+  flex: none;
+}
+
+.text {
+  font-weight: 500;
+  @include fluid(font-size, 12px, 14px);
+}
+
+.link {
+  font-weight: 500;
+  @include fluid(font-size, 12px, 14px);
+}

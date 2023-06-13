@@ -1,0 +1,7 @@
+@import "src/styles/mixins";
+
+.accountWrapper {
+  @include fluid(margin-top, 50px, 90px);
+  @include container;
+  display: flex;
+}

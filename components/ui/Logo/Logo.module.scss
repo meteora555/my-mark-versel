@@ -1,0 +1,8 @@
+@import "src/styles/mixins";
+
+.logo {
+  @include fluid(width, 80px, 100px);
+  @include fluid(height, 40px, 60px);
+  object-fit: contain;
+  transition: $trn;
+}

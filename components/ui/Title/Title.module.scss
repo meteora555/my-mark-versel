@@ -1,0 +1,16 @@
+@import "../../../src/styles/mixins";
+
+.title {
+  @include fluid(font-size, 24px, 36px);
+  font-weight: 700;
+  color: $textColor;
+}
+.margin {
+  @include fluid(margin-bottom, 15px, 30px);
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  .title {
+    text-align: center;
+  }
+}

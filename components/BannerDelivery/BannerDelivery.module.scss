@@ -1,0 +1,25 @@
+@import "src/styles/mixins";
+
+.bannerDelivery {
+  @include fluid(padding-top, 50px, 100px);
+  @include fluid(padding-bottom, 50px, 100px);
+  @include fluid(margin-bottom, 25px, 50px);
+  background: $block;
+}
+
+.flex {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.img {
+  filter: saturate(0);
+  transition: $trn;
+
+  &:hover {
+    filter: saturate(1);
+  }
+}

@@ -1,0 +1,88 @@
+@import "src/styles/mixins";
+
+.filterCatalog {
+  @include fluid(padding, 10px, 15px);
+  width: 20%;
+  height: fit-content;
+  box-shadow: $shadow;
+}
+.head {
+  @include fluid(margin-bottom, 10px, 15px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    @include fluid(font-size, 20px, 24px);
+    @include fluid(line-height, 27px, 29px);
+    font-style: normal;
+    font-weight: 400;
+    color: $textColor;
+  }
+
+  &__button {
+    @include fluid(font-size, 12px, 14px);
+    font-weight: 500;
+    line-height: 100%;
+    text-decoration-line: underline;
+    color: $primary;
+    background: none !important;
+  }
+}
+.span {
+  @include fluid(font-size, 14px, 16px);
+  font-weight: 500;
+  line-height: 100%;
+  color: $textColor;
+}
+.price {
+  @include fluid(margin-bottom, 20px, 30px);
+  @include fluid(gap, 10px, 10px);
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  color: $textColor;
+  font-size: 24px;
+}
+.sortRadio {
+  display: flex;
+  flex-direction: column;
+  border-radius: $blockRadius !important;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  background: transparent;
+  border: none !important;
+}
+.sortRadioValue {
+  font-size: 16px !important;
+  line-height: 150%;
+  font-weight: 400;
+}
+.button {
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+}
+.collapse {
+  @include fluid(margin-bottom, 20px, 30px);
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  font-size: 16px !important;
+  font-weight: 500;
+}
+.option {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  gap: 10px;
+
+  &__text {
+    @include fluid(font-size, 14px, 14px);
+    line-height: 150%;
+  }
+}

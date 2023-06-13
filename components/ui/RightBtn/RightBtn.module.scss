@@ -1,0 +1,30 @@
+@import "../../../src/styles/mixins";
+
+.icon {
+  @include fluid(font-size, 10px, 12px);
+  transition: 0.38s ease-in-out;
+  user-select: none;
+  color: $textColor;
+  position: absolute;
+  left: 50%;
+  top:40%;
+  transform: translate(-50%);
+}
+.nextE {
+  @include fluid(margin-left, 10px, 15px);
+  @include fluid(width, 33px, 44px);
+  @include fluid(height, 33px, 44px);
+  transition: $trn;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  background: $background;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  user-select: none;
+
+  &:hover {
+    .icon {
+      color: $primary;
+    }
+  }
+}

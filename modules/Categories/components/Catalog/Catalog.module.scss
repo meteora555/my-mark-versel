@@ -1,0 +1,18 @@
+@import "src/styles/mixins";
+
+.catalog {
+  position: relative;
+  display: grid;
+  width: 75%;
+  height: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 35px;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 537px) {
+    gap: 5px;
+  }
+}

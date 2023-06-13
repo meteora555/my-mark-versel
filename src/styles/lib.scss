@@ -1,0 +1,104 @@
+@import "./mixins.scss";
+
+:root {
+  --swiper-theme-color: #ff2149;
+}
+//Swiper
+.swiper-pagination {
+  @include fluid(top, 300px, 400px);
+  bottom: auto;
+}
+
+.ant-notification-notice-message {
+  color: $textColor !important;
+}
+
+.bannerDot {
+  position: absolute;
+
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background: $primary;
+    border: 1px solid $primary;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: $primary;
+}
+
+.swiper-button-disabled {
+  cursor: no-drop;
+  opacity: 0.2;
+}
+
+//Badge
+.ant-badge .ant-badge-count {
+  color: #fff !important;
+}
+
+.anticon {
+  display: inline-flex !important;
+  transition: $trn !important;
+}
+
+.ant-image {
+  height: 100%;
+
+  .ant-image-img {
+    height: 100%;
+  }
+}
+
+//Modal
+.ant-modal-header {
+  border-bottom: none !important;
+}
+
+.ant-modal-footer {
+  display: none;
+  border-top: none !important;
+}
+
+.ant-modal-body {
+  padding-bottom: 0px !important;
+}
+
+//Collapse
+.ant-collapse-header {
+  background: transparent !important ;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+.ant-collapse-content-box {
+  background: transparent !important;
+  padding: 0 !important ;
+}
+.ant-collapse-content {
+  background: transparent !important;
+  border: none !important;
+}
+.ant-collapse-content-active {
+  background: transparent !important;
+  border: none !important;
+}
+.ant-collapse-header-text {
+  background: transparent !important;
+  border: none !important;
+}
+.ant-collapse-item {
+  background: transparent !important;
+  border: none !important;
+  @include fluid(margin-bottom, 10px, 15px);
+}
+.ant-collapse-expand-icon {
+  span {
+    svg {
+      font-size: 14px;
+      color: $primary;
+    }
+  }
+}

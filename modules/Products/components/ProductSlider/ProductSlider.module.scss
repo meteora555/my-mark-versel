@@ -1,0 +1,74 @@
+@import "../../../../src/styles/mixins";
+
+.swiperCard {
+  @include container;
+  @include fluid(margin-bottom, 25px, 50px);
+}
+
+.block {
+  @include fluid(margin-bottom, 15px, 30px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.slider {
+  @include fluid(padding-bottom, 20px, 30px);
+  @include fluid(padding-top, 20px, 30px);
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include fluid(margin-bottom, 15px, 30px);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  @include fluid(font-size, 14px, 24px);
+  font-weight: 500;
+  color: $textColor;
+  position: relative;
+  transition: $trn;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.clear {
+  font-weight: 500;
+  @include fluid(font-size, 18px, 26px);
+  color: $textColor;
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  .homeSlide {
+    margin-bottom: 25px;
+  }
+  .block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .item {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .link {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

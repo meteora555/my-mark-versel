@@ -1,0 +1,82 @@
+@import "src/styles/mixins";
+
+.header {
+  @include fluid(padding-top, 10px, 20px);
+  @include fluid(padding-bottom, 10px, 20px);
+  min-height: 100px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  background: $background;
+  transition: $trn;
+  box-shadow: $shadow;
+}
+
+.block {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  @include fluid(margin-left, 30px, 60px);
+}
+
+.link {
+  @include fluid(font-size, 14px, 16px);
+  @include fluid(margin-right, 20px, 40px);
+  position: relative;
+  font-weight: 500;
+  transition: $trn;
+  color: $textColor;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    transition: $trn;
+    background: $primary;
+    width: 0;
+    border-radius: 3px;
+    bottom: -5px;
+    height: 2px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.link_active {
+  @include fluid(font-size, 14px, 16px);
+  @include fluid(margin-right, 20px, 40px);
+  position: relative;
+  font-weight: 500;
+  transition: $trn;
+  color: $textColor;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all 0.38s ease-in-out;
+    background: $primary;
+    width: 60%;
+    border-radius: 3px;
+    bottom: -5px;
+    height: 2px;
+  }
+}

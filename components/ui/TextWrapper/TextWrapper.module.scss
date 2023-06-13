@@ -1,0 +1,41 @@
+@import "src/styles/mixins";
+
+.textWrapper {
+  @include fluid(margin-bottom, 25px, 50px);
+  @include container;
+
+  h1 {
+    @include fluid(font-size, 24px, 36px);
+    @include fluid(margin-bottom, 20px, 40px);
+    font-weight: 700;
+  }
+
+  h2 {
+    @include fluid(font-size, 16px, 24px);
+    @include fluid(margin-top, 25px, 50px);
+    @include fluid(margin-bottom, 15px, 20px);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    font-weight: 600;
+  }
+
+  p {
+    @include fluid(font-size, 14px, 16px);
+    margin-bottom: 10px;
+
+  }
+
+  ul {
+    margin-left: 15px;
+    list-style: initial;
+
+    li {
+      @include fluid(font-size, 14px, 16px);
+      margin-bottom: 10px;
+    }
+
+  }
+}

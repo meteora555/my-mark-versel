@@ -1,0 +1,185 @@
+@import "../../../../src/styles/mixins";
+
+.productDetail {
+  @include container;
+  @include fluid(margin-bottom, 50px, 100px);
+  display: flex;
+}
+
+.imagesContainer {
+  width: 50%;
+}
+
+.imageBlock {
+  @include fluid(height, 500px, 800px);
+  @include fluid(margin-bottom, 15px, 30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagesMain {
+  @include fluid(padding, 15px, 20px);
+  background: $block;
+  object-fit: cover;
+}
+
+.imagesFlex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imageItem {
+  @include fluid(height, 150px, 300px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 30%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.imagesMin {
+  @include fluid(padding, 10px, 20px);
+  background: $block;
+  object-fit: contain;
+}
+
+.block {
+  width: 45%;
+  margin-left: 5%;
+}
+
+.code {
+  @include fluid(margin-bottom, 15px, 30px);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.codeText {
+  margin-left: 5px;
+  @include fluid(font-size, 12px, 15px);
+}
+
+.title {
+  @include fluid(font-size, 24px, 46px);
+  font-weight: 600;
+}
+
+.price {
+  @include fluid(font-size, 24px, 30px);
+  font-weight: 500;
+}
+
+.discount {
+  @include fluid(margin-left, 10px, 15px);
+  @include fluid(font-size, 18px, 24px);
+  font-weight: 500;
+  text-decoration-line: line-through;
+  opacity: 0.5;
+  color: #666;
+}
+
+.item {
+  @include fluid(padding-top, 15px, 25px);
+  @include fluid(padding-bottom, 15px, 25px);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #dddddd;
+}
+
+.text {
+  @include fluid(font-size, 14px, 16px);
+  @include fluid(margin-right, 15px, 30px);
+  font-weight: 500;
+  color: $textColor;
+}
+
+.color {
+  @include fluid(width, 40px, 50px);
+  @include fluid(height, 40px, 50px);
+  border-radius: 50%;
+  border: 1px solid $primary;
+}
+
+.buttons {
+  @include fluid(padding-top, 15px, 20px);
+  @include fluid(padding-bottom, 15px, 20px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  @include fluid(font-size, 14px, 16px);
+  @include fluid(padding-top, 10px, 15px);
+  @include fluid(padding-bottom, 10px, 15px);
+  width: 49%;
+  border-radius: 15px;
+  background: $primary;
+  color: #fff;
+  font-weight: 600;
+  transition: $trn;
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &_active {
+    @include fluid(font-size, 14px, 16px);
+    @include fluid(padding-top, 10px, 15px);
+    @include fluid(padding-bottom, 10px, 15px);
+    width: 49%;
+    border-radius: 15px;
+    background: rgb(205, 204, 204) !important;
+    color: #fff;
+    font-weight: 600;
+    transition: $trn;
+  }
+}
+
+.tabTitle {
+  width: 30%;
+}
+
+.description {
+  @include fluid(font-size, 14px, 16px);
+  color: $textColor;
+}
+
+.dots {
+  @include fluid(margin-right, 10px, 20px);
+  @include fluid(margin-left, 10px, 20px);
+  width: 100%;
+  height: 2px;
+  border-bottom: 2px dotted #dddddd;
+  flex-grow: 1;
+}
+
+.feature {
+  @include fluid(margin-bottom, 10px, 15px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.featureTitle {
+  @include fluid(font-size, 14px, 16px);
+  color: #666;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.featureValue {
+  @include fluid(font-size, 14px, 16px);
+  color: $textColor;
+  font-weight: 500;
+  width: fit-content;
+  white-space: nowrap;
+}
